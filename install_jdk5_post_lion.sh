@@ -4,6 +4,8 @@
 # See there in french http://blog.arkey.fr/2012/07/30/script-pour-installer-le-jdk-5-sur-macosx-lion/
 # Translate button is broken for now, please use Google to translate this website.
 #
+# 2014/11/29 Updated the script to run on OSX 10.11 El Capitan and OSX 10.10 Yosemite
+#
 # 2014/02/10 Updated the script to run on OSX 10.9 Maverick
 #
 # 2013/05/11 Added a few more guidance when Java Preferences is not available anymore 
@@ -45,7 +47,8 @@ java_prefs=`mdfind -onlyin /Applications "Java Preferences.app"`
 
 
 
-declare "osxname_14=OS 11"
+declare "osxname_15=El Capitan"
+declare "osxname_14=Yosemite"
 declare "osxname_13=Mavericks"
 declare "osxname_12=Mountain Lion"
 declare "osxname_11=Lion"
@@ -56,6 +59,8 @@ get_osx_name() {
   printf '%s' "${!declare_name}"
 }
 
+# 15.0.0 = El Capitan = 10.11.0
+# 14.0.0 = Yosemite = 10.10.0
 # 13.0.0 = Mavericks = 10.9.0
 # 12.1.0 = Mountain Lion = 10.8.1
 # 12.0.0 = Mountain Lion = 10.8
